@@ -1,0 +1,8 @@
+<!-- buttons.html -->
+<div class="navbar">
+    <a href="index.html" class="btn-custom">Home</a>
+    <a href="tour.html" class="btn-custom">Tour</a>
+    <a href="links.html" class="btn-custom">Links</a>
+    <a href="contact.html" class="btn-custom">Contact</a>
+</div>
+

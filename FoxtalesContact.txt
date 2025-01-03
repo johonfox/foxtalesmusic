@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your updated CSS -->
+    <link rel="icon" href="FoxtalesLogo.PNG" type="image/png">
+    <script>
+        window.onload = function() {
+            fetch('buttons.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading the buttons:', error));
+        }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html" class="btn-custom">Home</a>
+        <a href="tour.html" class="btn-custom">Tour</a>
+        <a href="links.html" class="btn-custom">Links</a>
+        <a href="contact.html" class="btn-custom">Contact</a>
+    </div>
+
+    <!-- Header Image (Same for all pages) -->
+    <header></header>
+
+    <!-- Contact Info Box -->
+    <div class="contact-overlay">
+        <div class="contact-box">
+            Contact:
+            <a href="mailto:foxtalesmusic1@gmail.com" class="email-link">foxtalesmusic</a>
+
+

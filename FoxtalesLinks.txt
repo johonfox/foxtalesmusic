@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="FoxtalesLogo.PNG" type="image/png">
+    <script>
+        window.onload = function() {
+            fetch('buttons.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading the buttons:', error));
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="btn-custom">Home</a>
+        <a href="tour.html" class="btn-custom">Tour</a>
+        <a href="links.html" class="btn-custom">Links</a>
+        <a href="contact.html" class="btn-custom">Contact</a>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Overlay Content -->
+        <div class="overlay">
+            <table class="links-table">
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.instagram.com/foxtalesmusic" target="_blank">
+                            <img src="Instagram_icon.png" alt="Instagram" class="social-logo">
+                        </a></td>
+                        <td><a href="https://open.spotify.com/artist/4XcFsYxwgTQL8bWhWMEZgN?si=rJgvjMFxSS-5q5boZow9Ag" target="_blank">
+                            <img src="Spotify_Primary_Logo_RGB_Green.png" alt="Spotify" class="social-logo">
+                        </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </header>
+</body>
+</html>
+

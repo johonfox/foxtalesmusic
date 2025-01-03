@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your updated CSS -->
+    <link rel="icon" href="FoxtalesLogo.PNG" type="image/png">
+    <script>
+        window.onload = function() {
+            fetch('buttons.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading the buttons:', error));
+        }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html" class="btn-custom">Home</a>
+        <a href="tour.html" class="btn-custom">Tour</a>
+        <a href="links.html" class="btn-custom">Links</a>
+        <a href="contact.html" class="btn-custom">Contact</a>
+    </div>
+
+    <!-- Header Image (Same for all pages) -->
+    <header></header>
+
+    <!-- Tour Dates Box -->
+    <div class="tour-overlay">
+        <!-- Tour Dates Box (Centered) -->
+        <div class="tour-dates-box">
+            <!-- Tour Dates Header -->
+            <h2>Upcoming Tour Dates</h2>
+
+            <!-- List of Tour Dates -->
+            <div class="tour-dates">
+                <p></p>
+                <!-- Add more tour dates as necessary -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

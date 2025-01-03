@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Foxtales</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" href="FoxtalesLogo.PNG" type="image/png">
+    <script>
+        window.onload = function() {
+            fetch('buttons.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading the buttons:', error));
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="btn-custom">Home</a>
+            <a href="tour.html" class="btn-custom">Tour</a>
+            <a href="links.html" class="btn-custom">Links</a>
+            <a href="contact.html" class="btn-custom">Contact</a>
+        </div>
+    </header>
+</body>
+</html>
+
