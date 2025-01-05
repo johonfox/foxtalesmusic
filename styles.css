@@ -205,6 +205,8 @@ form {
     border-radius: 10px;
     background-color: #f9f9f9;
 }
+
+
 input {
     width: 100%;
     padding: 10px;
@@ -221,16 +223,16 @@ button {
     cursor: pointer;
 }
 
-/* Style the form container */
+/* Style the form container with a larger background box */
 .mailing-list-container {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4; /* Light gray background */
-    border-radius: 10px;
-    width: 300px;
+    padding: 30px;
+    background-color: #ffffff; /* White background for the form box */
+    border-radius: 15px; /* Rounded corners */
+    width: 350px; /* Make the form slightly wider */
     margin: 20px auto; /* Center horizontally */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add some shadow */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Add a stronger shadow for better visibility */
 }
 
 /* Style the form elements */
@@ -238,33 +240,49 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Space between form elements */
+    gap: 15px; /* Increased space between form elements */
 }
 
+/* Style the labels */
 #mailing-list-form label {
-    font-size: 16px;
+    font-size: 18px; /* Larger text for the labels */
     color: #333;
+    font-weight: bold;
 }
 
+/* Style the input fields */
 #mailing-list-form input {
-    padding: 8px;
+    padding: 12px; /* Larger padding */
     width: 100%;
-    max-width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    max-width: 280px; /* Increased input field width */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px; /* Larger text */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
 
+#mailing-list-form input:focus {
+    border-color: #0066cc; /* Blue border when input is focused */
+}
+
+/* Style the submit button */
 #mailing-list-form button {
-    padding: 10px 20px;
+    padding: 12px 25px; /* Larger padding for the button */
     background-color: #0066cc; /* Button color */
     color: white;
+    font-size: 18px; /* Larger text for button */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
 #mailing-list-form button:hover {
-    background-color: #005bb5; /* Darker button on hover */
+    background-color: #005bb5; /* Darker button color on hover */
+}
+
+#mailing-list-form button:active {
+    background-color: #004a99; /* Even darker on button press */
 }
 
 
