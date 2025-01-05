@@ -15,6 +15,35 @@
                 })
                 .catch(error => console.error('Error loading the buttons:', error));
         }
+
+        // Handling form submission
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var form = document.getElementById('mailing-list-form');
+            var formData = new FormData(form);
+            
+            // Send form data to Google Apps Script
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    // Show success message without redirect
+                    document.getElementById('form-status').innerHTML = '<p style="color: green; font-size: 18px;">Success! You\'ve been added to the mailing list.</p>';
+                    form.reset(); // Reset the form
+                } else {
+                    // Show error message if any
+                    document.getElementById('form-status').innerHTML = '<p style="color: red; font-size: 18px;">There was an issue with the submission. Please try again.</p>';
+                }
+            })
+            .catch(error => {
+                document.getElementById('form-status').innerHTML = '<p style="color: red; font-size: 18px;">There was an error submitting the form. Please try again later.</p>';
+                console.error('Error:', error);
+            });
+        }
     </script>
 </head>
 <body>
@@ -44,7 +73,7 @@
             </table>
             <!-- Mailing List Form -->
             <div class="mailing-list-container">
-                <form id="mailing-list-form" action="https://script.google.com/macros/s/AKfycbzomQwcZfbAXNBFwYL83NLvDAapeBOisDzGC2JeV0fDHdGo3DicDV6ki57AQuMZXLNO/exec" method="POST">
+                <form id="mailing-list-form" action="https://script.google.com/macros/s/AKfycbzomQwcZfbAXNBFwYL83NLvDAapeBOisDzGC2JeV0fDHdGo3DicDV6ki57AQuMZXLNO/exec" method="POST" onsubmit="handleFormSubmit(event)">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="Name" required>
                     <br>
@@ -53,6 +82,8 @@
                     <br>
                     <button type="submit">Sign Up</button>
                 </form>
+                <!-- Success/Error Message -->
+                <div id="form-status"></div>
             </div>
         </div>
     </header>
