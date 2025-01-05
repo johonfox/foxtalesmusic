@@ -206,7 +206,6 @@ form {
     background-color: #f9f9f9;
 }
 
-
 /* Style the input fields */
 input {
     width: 100%;
@@ -287,5 +286,6 @@ button {
 #mailing-list-form button:active {
     background-color: #004a99; /* Even darker on button press */
 }
+
 
 
